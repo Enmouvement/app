@@ -2,7 +2,7 @@
     <b-navbar toggleable="md" type="dark" variant="primary">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand href="#">
-            <!-- <img src="../../assets/img/favicon.png" /> -->
+            <img src="../assets/img/logo.png" />
         </b-navbar-brand>
         <b-collapse v-if="userMenu" :is-nav="true" id="nav_collapse">
             <b-navbar-nav>
