@@ -1,0 +1,27 @@
+<%
+let csp = {};
+csp['default-src'] = [ "'self'", "'unsafe-eval'", "'unsafe-inline'" ];
+csp['style-src']   = [ "'self'", "'unsafe-inline'" ];
+csp['media-src']   = [ "*" ];
+csp['img-src']     = [ "'self'", "data:", "content:" ];
+
+if(process.env.NODE_ENV == 'development') {
+    let appHost = process.env.APP_URL.split('://').pop();
+    csp['default-src'].push(`ws://${appHost}`);
+}
+%>
+
+<!doctype html>
+<html>
+    <head>
+        <title><%= process.env.APP_TITLE %></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta http-equiv="Content-Security-Policy" content="<% for(let src in csp) { %><%= ' ' + src + ' ' + csp[src].join(' ') + ';' %><% } %>" />
+    </head>
+    <body>
+        <div id="app">
+            <router-view></router-view>
+        </div>
+    </body>
+</html>
