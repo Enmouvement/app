@@ -10,8 +10,6 @@ Vue.use(VeeValidate, {
     locale: 'fr'
 });
 
-console.log('TEST');
-
 // Start Vue App
 import i18n from './i18n';
 import router from './router';
