@@ -8,8 +8,10 @@ import * as Views from '../views';
 
 const router = new VueRouter({
     routes: [ { path: '', component: Layout, children: [
-        { path: '',                     component: Views.Home       },
-        { path: 'activation/:user_id',  component: Views.Activation }
+        { path: 'activation/:user_id',  name: 'activation',     component: Views.Activation,    meta: { private: false } },
+        { path: '',                     name: 'home',           component: Views.Home,          meta: { private: true  } },
+        { path: 'login',                name: 'login',          component: Views.Login,         meta: { private: false } },
+        { path: 'register',             name: 'registration',   component: Views.Registration,  meta: { private: false } }
     ] } ]
 });
 
