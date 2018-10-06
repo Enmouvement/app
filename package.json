@@ -1,0 +1,28 @@
+{
+    "name": "enmouvement-app",
+    "version": "1.0.0",
+    "description": "HackYourSport Prototype",
+    "keywords": [
+        "hackyoursport",
+        "enmouvement",
+        "outdooria",
+        "protitype"
+    ],
+    "contributors": [
+        "Breizh <breizhreloaded@outlook.com",
+        "Ray"
+    ],
+    "main": "src/app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/Enmouvement/app.git"
+    },
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/Enmouvement/app/issues"
+    },
+    "homepage": "https://github.com/Enmouvement/app#readme"
+}
