@@ -33,13 +33,13 @@ export default {
 </script>
 
 <style lang="scss">
-// @import "../../assets/style/colors";
+@import "../assets/style/colors";
 
-// $theme-colors: (
-//     "primary": $joueautennis-blue,
-//     "dark": $joueautennis-purple,
-//     "light": $joueautennis-yellow
-// );
+$theme-colors: (
+    "primary": $enmouvement-green,
+    "dark": $enmouvement-purple,
+    "light": $enmouvement-yellow
+);
 
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-vue/dist/bootstrap-vue.css";
